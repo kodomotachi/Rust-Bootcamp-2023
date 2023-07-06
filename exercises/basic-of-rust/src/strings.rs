@@ -4,42 +4,51 @@ fn exercise1(color: &str) -> String {
     todo!()
 }
 
-// Exercise 2
+// Exercise 2 (completed)
 // Fix all errors without adding newline
 fn exercise2() -> String {
-    let s = String::from("hello");
+    let mut s = String::from("hello");
     s.push(',');
-    s.push(" world");
-    s += "!".to_string();
+    s += " world";
+    s.push('!');
     s
 }
-// Exercise 3
+// Exercise 3 (completed)
 // Fix errors without removing any line
 fn exercise3() -> String {
     let s1 = String::from("hello,");
     let s2 = String::from("world!");
-    let s3 = s1 + s2;
+    let s3 = format!("{} {}", s1, s2);
     s3
 }
 
-// Exercise 4
+// Exercise 4 (completed)
 // Reverse a string
 
 fn reverse_string(input: &str) -> String {
-    todo!()
+    let ans: String = input.chars().rev().collect();
+    ans
 }
 
 
-// Exercise 5
+// Exercise 5 (completed)
 // Check if a string is a palindrome
 fn is_palindrome(word: &str) -> bool {
-    todo!()
+    let check: String = word.chars().rev().collect();
+    if check == word
+    {
+        true
+    }
+    else
+    {
+        false
+    }
 }
 
-// Exercise 6
+// Exercise 6 (completed)
 // Count the occurrences of a character in a string
 fn count_char_occurrences(string: &str, ch: char) -> usize {
-    todo!()
+    string.chars().filter(|&c| c == ch).count()
 }
 
 #[cfg(test)]

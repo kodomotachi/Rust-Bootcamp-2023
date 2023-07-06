@@ -1,52 +1,108 @@
-//Exercise 1
+//Exercise 1 (completed)
 // Complete this function to return the bigger number!
 // Do not use:
 // - another function call
 // - additional variables
 pub fn bigger(a: i32, b: i32) -> i32 {
-    todo!()
+    if a > b
+    {
+        a
+    }
+    else
+    {
+        b
+    }
 }
 
-//Exercise 2
+//Exercise 2 (completed)
 // Input: Provide an arbitrary value of number
 // Check number is Positive or Negative or Zero
 // Output: &str
-fn check_number(number: u32) -> &'static str {
-    todo!()
+fn check_number(number: i32) -> &'static str {
+    if number > 0
+    {
+        "Positive"
+    }
+    else if number < 0
+    {
+        "Negative"
+    }
+    else
+    {
+        "Zero"
+    }
 }
 
-// Exercise 3
+// Exercise 3 (completed)
 // Step 1: Make me compile!
 // Step 2: Get the bar_for_fuzz and default_to_baz tests passing!
 
 pub fn foo_if_fizz(fizzish: &str) -> &str {
     if fizzish == "fizz" {
         "foo"
-    } else {
-        1
+    } 
+    else if fizzish == "fuzz" {
+        "bar"
+    }
+    else
+    {
+        "baz"
     }
 }
 
-// Exercise 4
+// Exercise 4 (completed)
 // Determine if a given year is a leap year
 // Implement logic
 fn is_leap_year(year: i32) -> bool {
-    todo!()
+    if year % 4 == 0
+    {
+        true
+    }
+    else
+    {
+        false
+    }
 }
 
-// Exercise 5
+// Exercise 5 (completed)
 // Calculate the factorial of a number
 // Implement logic
 fn factorial(n: u32) -> u32 {
-    todo!()
+    let mut ans: u32 = 1;
+    for i in 1..=n
+    {
+        ans *= i;
+    }
+    ans
 }
 
-// Exercise 6
+// Exercise 6 (completed)
 // Check if a number is prime
 // Implement logic
 
 fn is_prime(n: u32) -> bool {
-    todo!()
+    let mut bit: i32 = 0;
+    for i in 1..=n
+    {
+        let mut ans = 0;
+        if n % i == 0
+        {
+            ans = 1;
+        }
+        else
+        {
+            ans = 0;
+        }
+        bit += ans;
+    }
+    if bit == 2
+    {
+        true
+    }
+    else
+    {
+        false
+    }
 }
 
 

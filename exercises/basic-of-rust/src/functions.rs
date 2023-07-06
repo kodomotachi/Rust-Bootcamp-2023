@@ -1,31 +1,34 @@
-// Exercise 1
+// Exercise 1 (completed)
 // Fix all errors 
-fn sum(x, y: i32) {
-    x + y;
+fn sum(x: i32, y: i32) -> i32
+{
+    x + y
 }
 
-//Exercise 2
+//Exercise 2 (completed)
 // Input: Provide an arbitrary value of n
 // Implement sum function: 1+2+3+..n
 // Output: Calculate sum 1 to n 
 pub fn sum_one_to_n(n: u32) -> u32 {
     // your code for summing all digits from 1 to `n` (inclusive) should go
-    // here (you can remove the sample return of `0`)
-    0
+    n * (n + 1) / 2
 }
 
-// Exercise 3
+// Exercise 3 (completed)
 // Input: list of arbitrary numbers
 // Problem: Calculate the average of a list of numbers
 // Output: Average Number 
 fn calculate_average(numbers: &[f64]) -> f64 {
-    todo!()
+    let sum: f64 = numbers.iter().sum();
+    let count = numbers.len() as f64;
+    sum / count
 }
 
 // Exercise 4
 // Calculate the sum of all even numbers in a list
 fn sum_even_numbers(numbers: &[i32]) -> i32 {
-    todo!()
+    let sum: i32 = numbers.iter().filter(|&num| num % 2 == 0).sum();
+    sum
 }
 
 
@@ -48,7 +51,7 @@ mod tests {
         let result = sum_one_to_n(0);
 
         assert_eq!(result, 0);
-    }
+    }  
 
     // Test for exercise 2
     #[test]
@@ -73,7 +76,6 @@ mod tests {
         let numbers = [2.5, 4.8, 6.3, 1.7, 3.9];
         let result = calculate_average(&numbers);
         assert_eq!(result, 3.84);
-
     }
 
     // Test for exercise 3
